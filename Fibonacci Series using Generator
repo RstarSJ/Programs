@@ -1,0 +1,16 @@
+def double(n):
+    a=0
+    b=1
+    counter=0
+    while True:
+        if (counter>n): return
+        yield a
+        a=b
+        b=a+b
+        counter=counter+1
+
+inp=int(input("Enter the total numbers you want in series:"))
+new=double(inp)
+
+for i in new:
+    print(i)
